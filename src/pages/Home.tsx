@@ -1,19 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { RootState } from '../types';
 
-const Home: React.FunctionComponent = (): JSX.Element => {
-  useEffect(() => {
-    fetch('http://api.scb.se')
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((err) => console.error(err));
-  }, []);
+const Home: React.FunctionComponent = (props): JSX.Element => {
+  const hej = 'Home';
 
   return (
-    <div />
+    <div>
+      {hej}
+    </div>
   );
 };
 
